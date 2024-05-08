@@ -4,6 +4,7 @@ include("build_strlen.php");//This function use build_strlen.php
     function String_to_array(string $str , int $length = 1) : array{
         $arrayofChar = [];
         $lengthOfstring = build_strlen($str) ;
+        if($length <= 0) die("The length should be positive.");
         if($length === 1):
             for ($i = 0 ; $i < $lengthOfstring ; $i++) $arrayofChar[] = $str[$i];// I used my function build_strlen
         else: 
